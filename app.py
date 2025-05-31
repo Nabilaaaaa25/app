@@ -89,3 +89,8 @@ elif menu == "Prediksi":
             input_data = pd.DataFrame([[d3st, d4st, d4ks]], columns=["formasi.d3st", "formasi.d4st", "formasi.d4ks"])
             hasil = model.predict(input_data)
             st.success(f"🎯 Estimasi Jumlah Pendaftar D4-KS: **{hasil[0]:.0f} orang**")
+
+# Input interaktif
+name = st.text_input ("Siapa nama Anda?")
+if name:
+    st.succes(f"Halo, {name}!")
